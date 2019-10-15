@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>HXR cookie experiment</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>Hello world</p>
+    <button onClick="login()">Login</button>
+
+    <script type="text/javascript">
+      function login() {
+        $.ajax({
+          url: '/login',
+          success: handleSuccess
+        });
+      }
+
+      function handleSuccess(data) {
+        alert('logged in');
+      }
+    </script>
+  </body>
+</html>
